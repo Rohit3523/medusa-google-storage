@@ -1,6 +1,6 @@
 {
   "name": "medusa-google-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A storage provider for Google Cloud Storage",
   "author": "Rohit",
   "license": "MIT",
