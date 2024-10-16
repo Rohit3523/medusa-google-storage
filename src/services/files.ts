@@ -42,7 +42,7 @@ class CloudFileService extends AbstractFileService {
 
     async upload(fileData: Express.Multer.File): Promise<FileServiceUploadResult> {
         try {
-            const filename = `${fileData.originalname.split(".")[``]}_${Date.now()}.${fileData.originalname.split(".")[1]}`;
+            const filename = `${Date.now()}_${fileData.originalname}`;
             const destination = this.directory ? `${this.directory}/${filename}` : filename;
 
             const bucket = this.storage.bucket(this.bucketName);
@@ -73,7 +73,7 @@ class CloudFileService extends AbstractFileService {
         fileData: Express.Multer.File
     ): Promise<FileServiceUploadResult> {
         try {
-            const filename = `${fileData.originalname.split(".")[``]}_${Date.now()}.${fileData.originalname.split(".")[1]}`
+            const filename = `${Date.now()}_${fileData.originalname}`;
             const destination = this.directory ? `${this.directory}/${filename}` : filename;
 
             const bucket = this.storage.bucket(this.bucketName);
