@@ -8,6 +8,10 @@
     "medusa",
     "medusa-plugin-storage"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohit3523/medusa-google-storage.git"
+  },
   "scripts": {
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
     "build:server": "cross-env npm run clean && tsc -p tsconfig.server.json",
